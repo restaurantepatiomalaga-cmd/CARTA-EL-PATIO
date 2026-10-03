@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#111111">
+<meta name="description" content="Carta digital de El Patio Málaga">
+<title>El Patio — Nuestra Carta</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<header class="hero" id="inicio">
+  <div class="hero-inner">
+    <div class="eyebrow">Restaurante</div>
+    <h1 id="restaurantName">El Patio </h1>
+    <p>Nuestra carta</p>
+  </div>
+</header>
+
+<!-- ==================================================
+     BANNER TEMPORAL - 6 PLATOS NUEVOS
+     PARA ELIMINARLO: BORRAR TODO ESTE BLOQUE
+================================================== -->
+
+<section class="banner-platos-nuevos" id="bannerPlatosNuevos">
+
+    <button class="banner-cerrar"
+            onclick="document.getElementById('bannerPlatosNuevos').remove()"
+            aria-label="Cerrar">
+        ×
+    </button>
+
+    <div class="banner-slider">
+
+        <!-- PLATO 1 -->
+        <div class="banner-slide activo">
+            <img src="img/nuevos/plato-1.webp" alt="Nuevo plato">
+        </div>
+
+        <!-- PLATO 2 -->
+        <div class="banner-slide">
+            <img src="img/nuevos/plato-2.webp" alt="Nuevo plato">
+        </div>
+
+        <!-- PLATO 3 -->
+        <div class="banner-slide">
+            <img src="img/nuevos/plato-3.webp" alt="Nuevo plato">
+        </div>
+
+        <!-- PLATO 4 -->
+        <div class="banner-slide">
+            <img src="img/nuevos/plato-4.webp" alt="Nuevo plato">
+        </div>
+
+        <!-- PLATO 5 -->
+        <div class="banner-slide">
+            <img src="img/nuevos/plato-5.webp" alt="Nuevo plato">
+        </div>
+
+        <!-- PLATO 6 -->
+        <div class="banner-slide">
+            <img src="img/nuevos/plato-6.webp" alt="Nuevo plato">
+        </div>
+
+        <!-- FLECHAS -->
+        <button class="banner-flecha anterior" onclick="cambiarPlato(-1)">
+            ‹
+        </button>
+
+        <button class="banner-flecha siguiente" onclick="cambiarPlato(1)">
+            ›
+        </button>
+
+        <!-- INDICADORES -->
+        <div class="banner-indicadores">
+            <span onclick="irAPlato(0)" class="indicador activo"></span>
+            <span onclick="irAPlato(1)" class="indicador"></span>
+            <span onclick="irAPlato(2)" class="indicador"></span>
+            <span onclick="irAPlato(3)" class="indicador"></span>
+            <span onclick="irAPlato(4)" class="indicador"></span>
+            <span onclick="irAPlato(5)" class="indicador"></span>
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+    let platoActual = 0;
+    const slides = document.querySelectorAll('.banner-slide');
+    const indicadores = document.querySelectorAll('.indicador');
+
+    function mostrarPlato(numero) {
+
+        slides.forEach(slide => {
+            slide.classList.remove('activo');
+        });
+
+        indicadores.forEach(indicador => {
+            indicador.classList.remove('activo');
+        });
+
+        slides[numero].classList.add('activo');
+        indicadores[numero].classList.add('activo');
+
+        platoActual = numero;
+    }
+
+    function cambiarPlato(direccion) {
+
+        platoActual += direccion;
+
+        if (platoActual >= slides.length) {
+            platoActual = 0;
+        }
+
+        if (platoActual < 0) {
+            platoActual = slides.length - 1;
+        }
+
+        mostrarPlato(platoActual);
+    }
+
+    function irAPlato(numero) {
+        mostrarPlato(numero);
+    }
+
+    /* CAMBIO AUTOMÁTICO CADA 4 SEGUNDOS */
+    setInterval(() => {
+        cambiarPlato(1);
+    }, 8000);
+</script>
+
+<!-- ===== FIN BANNER TEMPORAL ===== -->
+
+<section class="intro">
+  <h2>Bienvenidos </h2>
+  <p id="welcome">Cargando...</p>
+  <p id="story">Cargando...</p>
+</section>
+
+<div class="nav-wrap">
+  <nav class="nav" id="nav" aria-label="Categorías de la carta"></nav>
+</div>
+
+<div class="tools">
+  <input class="search" id="search" type="search" placeholder="🔎 Buscar un plato..." aria-label="Buscar un plato">
+</div>
+
+<main id="menu"></main>
+<div class="empty" id="empty">No encontramos platos con esa búsqueda.</div>
+<p class="hint">Las fotografías son independientes de la carta: coloca cada archivo en la ruta indicada y aparecerá automáticamente.</p>
+
+<footer class="footer">
+  <h2>El Patio Málaga</h2>
+  <p id="instagram">@elpatiomalaga</p>
+  <p id="hours">De Lunes a Domingo de 12:00 p.m a 10:30 p.m</p>
+</footer>
+
+
+<!-- ==================================================
+     VENTANA DE DETALLE DEL PRODUCTO
+     Se abre al tocar cualquier producto.
+================================================== -->
+<div class="producto-modal" id="productoModal" aria-hidden="true">
+  <div class="producto-modal-backdrop" data-modal-close></div>
+
+  <div class="producto-modal-contenido" role="dialog" aria-modal="true" aria-labelledby="productoModalNombre">
+    <button class="producto-modal-cerrar" type="button" aria-label="Cerrar" data-modal-close>×</button>
+
+    <div class="producto-modal-imagen-wrap">
+      <img id="productoModalImagen" src="" alt="">
+    </div>
+
+    <div class="producto-modal-info">
+      <h2 id="productoModalNombre"></h2>
+      <p id="productoModalDescripcion"></p>
+      <div id="productoModalPrecio" class="producto-modal-precio"></div>
+    </div>
+  </div>
+</div>
+
+<button class="top" id="top" aria-label="Volver arriba">↑</button>
+<script src="datos/menu.js"></script>
+<script src="js/menu.js"></script>
+</body>
+</html>
