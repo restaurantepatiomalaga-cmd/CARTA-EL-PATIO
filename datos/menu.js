@@ -42,7 +42,33 @@ window.MENU_DATA = {
   },
   "categorias": {
    
-    "Entradas": [
+    "Lo sugerido": [
+      {
+        "nombre": "Papitas Nativas",
+        "descripcion": "Crujientes chips de papas nativas acompañadas con salsa de la casa.",
+        "precio": 4000,
+        "imagen": "img/entradas/papitas-nativas.webp"
+      },
+       {
+        "nombre": "Bruschetta",
+        "descripcion": "Dorado pan baguette en finas hierbas, cremoso queso de búfala en reducción de tomates cherry y un toque de albahaca.",
+        "precio": 12000,
+        "imagen": "img/entradas/tapas-espanolas.webp"
+      },
+      {
+        "nombre": "Chunchulines",
+        "descripcion": "Deliciosos chunchulines acompañados de papitas criollas crocantes.",
+        "precio": 20000,
+        "imagen": "img/entradas/chunchulines.webp"
+      },
+      {
+        "nombre": "Ceviche de Chicharrón",
+        "descripcion": "Crujientes bocados de chicharrón recién hecho, sobre cama de aguacate, bañados en un jugo cítrico refrescante con toques de limón, cebolla morada y hierbas frescas.",
+        "precio": 20000,
+        "imagen": "img/entradas/ceviche-chicharron.webp"
+      }
+    ],
+       "Entradas": [
       {
         "nombre": "Papitas Nativas",
         "descripcion": "Crujientes chips de papas nativas acompañadas con salsa de la casa.",
