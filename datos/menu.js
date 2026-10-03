@@ -153,8 +153,8 @@ window.MENU_DATA = {
     ],
     "Pastas y Risottos": [
       {
-        "nombre": "Pasta negra",
-        "descripcion": "",
+        "nombre": "Pasta oriental",
+        "descripcion": "Pasta al wok, vegetales y hongos salteados en nuestra irresistible salsa oriental, finalizada con un toque crocante.",
         "precio": 28000,
         "imagen": "img/pastas/pnegra.webp"
       },
