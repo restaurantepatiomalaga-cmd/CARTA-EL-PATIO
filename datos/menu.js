@@ -153,10 +153,10 @@ window.MENU_DATA = {
     ],
     "Pastas y Risottos": [
       {
-        "nombre": "Pasta al Pesto",
-        "descripcion": "Tallarines en salsa pesto de la casa acompañados de pan baguete dorado en finas hierbas y ensalada de uvas, queso, repollo, crotones de pan y reducción de panela.",
+        "nombre": "Pasta negra",
+        "descripcion": "",
         "precio": 28000,
-        "imagen": "img/pastas/pasta-pesto.webp"
+        "imagen": "img/pastas/pnegra.webp"
       },
       {
         "nombre": "Pasta a la Boloñesa",
@@ -174,7 +174,7 @@ window.MENU_DATA = {
         "nombre": "Pasta Carbonara",
         "descripcion": "Pasta de tu preferencia en salsa carbonara acompañados de pan baguett y ensalada.",
         "precio": 30000,
-        "imagen": "img/pastas/pasta-carbonara.webp"
+        "imagen": "img/pastas/carbonara.webp"
       },
       {
         "nombre": "Pasta Alfredo",
@@ -573,6 +573,12 @@ window.MENU_DATA = {
         "descripcion": "",
         "precio": 10000,
         "imagen": "img/bebidas/soda-liche.webp"
+      },
+      {
+        "nombre": "limon",
+        "descripcion": "",
+        "precio": 10000,
+        "imagen": "img/bebidas/slimon.webp"
       }
     ],
     "Bebidas Frías": [
