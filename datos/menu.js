@@ -165,10 +165,10 @@ window.MENU_DATA = {
         "imagen": "img/pastas/pasta-bolonesa.webp"
       },
       {
-        "nombre": "Arroz Oriental",
-        "descripcion": "Arroz frito con cerdo y pollo en salsa soya, raíces chinas y trocitos de huevo.",
+        "nombre": "Risotto Loto Caribeño ",
+        "descripcion": "Arroz cremoso a base de coco acompañado de 200 gramos de lomo fino y salsa de camarones con ron Malibú.",
         "precio": 26000,
-        "imagen": "img/pastas/arroz-oriental.webp"
+        "imagen": "img/pastas/alcaribeño.webp"
       },
       {
         "nombre": "Pasta Carbonara",
@@ -229,10 +229,10 @@ window.MENU_DATA = {
     ],
     "Arroces": [
       {
-        "nombre": "Papitas Nativas",
+        "nombre": "Chaufa lomo",
         "descripcion": "Crujientes chips de papas nativas acompañadas con salsa de la casa.",
         "precio": 4000,
-        "imagen": "img/entradas/papitas-nativas.webp"
+        "imagen": "img/arroces/chaufa.webp"
       },
       {
         "nombre": "Ceviche de Chicharrón",
